@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:lged_inspection/app/modules/login/components/components.dart';
 import 'package:lged_inspection/app/utils/dimens.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -24,7 +25,9 @@ class LoginView extends GetView<LoginController> {
         ),
         child: Column(
           children: [
-            SizedBox(height: Dimension.height30,),
+            SizedBox(
+              height: Dimension.height30,
+            ),
             Container(
               height: Dimension.height45 * 6,
               width: double.maxFinite,
@@ -57,14 +60,19 @@ class LoginView extends GetView<LoginController> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Forget Password?"),
-                Container(
-                  height: Dimension.height30+Dimension.height5,
-                  width: Dimension.width30 * 4,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Center(
-                    child: Text("Login"),
+                InkWell(
+                  onTap: (){
+                    Get.toNamed(Routes.TASK);
+                  },
+                  child: Container(
+                    height: Dimension.height30 + Dimension.height5,
+                    width: Dimension.width30 * 4,
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(5)),
+                    child: Center(
+                      child: Text("Login"),
+                    ),
                   ),
                 )
               ],

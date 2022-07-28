@@ -8,6 +8,10 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/task/bindings/task_binding.dart';
+import '../modules/task/views/task_view.dart';
+import '../modules/task_details/bindings/task_details_binding.dart';
+import '../modules/task_details/views/task_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -34,8 +38,18 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () =>  LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.TASK,
+      page: () => const TaskView(),
+      binding: TaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.TASK_DETAILS,
+      page: () => const TaskDetailsView(),
+      binding: TaskDetailsBinding(),
     ),
   ];
 }

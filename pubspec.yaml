@@ -9,8 +9,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_cli: ^1.8.1
   get: 4.6.5
+  fl_chart: ^0.55.0
   flutter: 
     sdk: flutter
+
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -21,4 +23,5 @@ flutter:
   assets:
     - assets/image/
   uses-material-design: true
+
 
